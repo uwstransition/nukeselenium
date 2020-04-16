@@ -10,4 +10,4 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- powershell: .\build.ps1
+- powershell: (Get-Item "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe").VersionInfo
