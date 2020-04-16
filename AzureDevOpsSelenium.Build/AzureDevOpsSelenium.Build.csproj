@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Nuke.Common" Version="0.20.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Common build related files -->
+    <None Include="..\build.ps1" />
+    <None Include="..\.nuke" />
+    <None Include="..\azure-pipelines.yml" Condition="Exists('..\azure-pipelines.yml')" />
+  </ItemGroup>
+</Project>
